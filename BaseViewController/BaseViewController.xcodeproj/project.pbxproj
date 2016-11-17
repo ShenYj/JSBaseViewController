@@ -13,6 +13,7 @@
 		F72350331DDDF791005D0E2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F723502D1DDDF791005D0E2E /* ViewController.m */; };
 		F72350351DDDF7C8005D0E2E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72350341DDDF7C8005D0E2E /* Launch Screen.storyboard */; };
 		F72350381DDDF7FB005D0E2E /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350371DDDF7FB005D0E2E /* JSNavigationController.m */; };
+		F723503B1DDDF8A8005D0E2E /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		F72350341DDDF7C8005D0E2E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F72350361DDDF7FB005D0E2E /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
 		F72350371DDDF7FB005D0E2E /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
+		F72350391DDDF8A8005D0E2E /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
+		F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 			children = (
 				F72350361DDDF7FB005D0E2E /* JSNavigationController.h */,
 				F72350371DDDF7FB005D0E2E /* JSNavigationController.m */,
+				F72350391DDDF8A8005D0E2E /* JSBaseViewController.h */,
+				F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -77,14 +82,14 @@
 		F72350231DDDF791005D0E2E /* Demos */ = {
 			isa = PBXGroup;
 			children = (
-				F723501C1DDDF739005D0E2E /* Info.plist */,
 				F72350241DDDF791005D0E2E /* AppDelegate.h */,
 				F72350251DDDF791005D0E2E /* AppDelegate.m */,
-				F72350261DDDF791005D0E2E /* Assets.xcassets */,
-				F723502B1DDDF791005D0E2E /* main.m */,
-				F72350341DDDF7C8005D0E2E /* Launch Screen.storyboard */,
 				F723502C1DDDF791005D0E2E /* ViewController.h */,
 				F723502D1DDDF791005D0E2E /* ViewController.m */,
+				F723502B1DDDF791005D0E2E /* main.m */,
+				F72350341DDDF7C8005D0E2E /* Launch Screen.storyboard */,
+				F72350261DDDF791005D0E2E /* Assets.xcassets */,
+				F723501C1DDDF739005D0E2E /* Info.plist */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72350381DDDF7FB005D0E2E /* JSNavigationController.m in Sources */,
+				F723503B1DDDF8A8005D0E2E /* JSBaseViewController.m in Sources */,
 				F72350331DDDF791005D0E2E /* ViewController.m in Sources */,
 				F72350321DDDF791005D0E2E /* main.m in Sources */,
 				F723502E1DDDF791005D0E2E /* AppDelegate.m in Sources */,

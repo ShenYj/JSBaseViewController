@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JSNavigationController.h"
+#import "JSBaseViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    UIViewController *baseVC = [[UIViewController alloc] init];
-    baseVC.view.backgroundColor = [UIColor orangeColor];
+    JSBaseViewController *baseVC = [[JSBaseViewController alloc] init];
     
     JSNavigationController *navigationController = [[JSNavigationController alloc] initWithRootViewController:baseVC];
     

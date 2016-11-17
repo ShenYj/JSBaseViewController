@@ -1,25 +1,35 @@
 //
-//  JSNavigationController.m
+//  JSBaseViewController.m
 //  BaseViewController
 //
 //  Created by ShenYj on 2016/11/17.
 //  Copyright © 2016年 ShenYj. All rights reserved.
 //
 
-#import "JSNavigationController.h"
+#import "JSBaseViewController.h"
 
-@interface JSNavigationController ()
+@interface JSBaseViewController ()
 
 @end
 
-@implementation JSNavigationController
+@implementation JSBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self prepareCustomNavigationBar];
+    [self prepareView];
+}
+
+/** 自定义导航条视图 */
+- (void)prepareCustomNavigationBar {
     
-    // 1.隐藏默认的导航条
-    self.navigationBar.hidden = YES;
+    
+}
+
+- (void)prepareView {
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
