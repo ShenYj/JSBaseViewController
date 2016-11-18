@@ -11,9 +11,13 @@
 
 @interface JSBaseViewController : UIViewController
 
+
 /** 自定义导航条 */
 @property (nonatomic,strong) UINavigationBar *js_NavigationBar;
 /** 自定义导航条Item */
 @property (nonatomic,strong) UINavigationItem *js_navigationItem;
+
+
+
 
 @end

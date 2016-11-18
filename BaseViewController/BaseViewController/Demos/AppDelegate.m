@@ -22,15 +22,28 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    ViewController *baseVC = [[ViewController alloc] init];
+    UITabBarController *rootVC = [[UITabBarController alloc] init];
+    JSNavigationController *navigationController1 = [self loadNavigationControllerWithTitle:@"页面1"];
+    JSNavigationController *navigationController2 = [self loadNavigationControllerWithTitle:@"页面2"];
+    JSNavigationController *navigationController3 = [self loadNavigationControllerWithTitle:@"页面3"];
+    JSNavigationController *navigationController4 = [self loadNavigationControllerWithTitle:@"页面4"];
     
-    JSNavigationController *navigationController = [[JSNavigationController alloc] initWithRootViewController:baseVC];
+    rootVC.viewControllers = @[navigationController1,navigationController2,navigationController3,navigationController4];
     
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = rootVC;
     
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (JSNavigationController *)loadNavigationControllerWithTitle:(NSString *)title {
+    ViewController *baseVC = [[ViewController alloc] init];
+    JSNavigationController *navigationController = [[JSNavigationController alloc]initWithRootViewController:baseVC];
+    navigationController.bottomBarHiddenWhenPushed = YES;
+    baseVC.title = title;
+    baseVC.tabBarItem.title = title;
+    return navigationController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

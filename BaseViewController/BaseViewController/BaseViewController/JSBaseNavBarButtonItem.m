@@ -29,7 +29,7 @@
     }
     [button sizeToFit];
     
-    normalColor ? ([button setTitleColor:normalColor forState:UIControlStateNormal]): ([button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal]);
+    normalColor ? ([button setTitleColor:normalColor forState:UIControlStateNormal]): ([button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal]);
     highlightedColor ? ([button setTitleColor:highlightedColor forState:UIControlStateHighlighted]) : ([button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted]);
     
     JSBaseNavBarButtonItem *barButtonItem = [[JSBaseNavBarButtonItem alloc] initWithCustomView:button];

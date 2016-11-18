@@ -7,7 +7,7 @@
 //
 
 #import "JSBaseViewController.h"
-
+#import "JSNavigationController.h"
 
 static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 */
 
@@ -49,7 +49,11 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
     
     [self.view addSubview:self.js_NavigationBar];
     self.js_NavigationBar.items = @[self.js_navigationItem];
-    [self.js_NavigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18],NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.js_NavigationBar.barTintColor = [UIColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1.0];
+    [self.js_NavigationBar setTitleTextAttributes:@{
+                                                    NSFontAttributeName: [UIFont systemFontOfSize:18],
+                                                    NSForegroundColorAttributeName: [UIColor orangeColor]}
+     ];
     
 }
 
@@ -60,7 +64,6 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
     
     if (!_js_NavigationBar) {
         _js_NavigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kNavigationBarHeight)];
-        _js_NavigationBar.barTintColor = [UIColor orangeColor];
     }
     return _js_NavigationBar;
 }

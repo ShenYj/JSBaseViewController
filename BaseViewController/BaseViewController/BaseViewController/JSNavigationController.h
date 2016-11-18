@@ -10,4 +10,8 @@
 
 @interface JSNavigationController : UINavigationController
 
+/** Push时是否隐藏底部TabBar */
+@property (nonatomic,assign) BOOL bottomBarHiddenWhenPushed;
+
+
 @end
