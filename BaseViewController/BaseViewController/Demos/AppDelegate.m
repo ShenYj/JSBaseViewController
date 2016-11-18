@@ -29,6 +29,7 @@
     JSNavigationController *navigationController4 = [self loadNavigationControllerWithTitle:@"页面4"];
     
     rootVC.viewControllers = @[navigationController1,navigationController2,navigationController3,navigationController4];
+    [UITabBar appearance].tintColor = [UIColor orangeColor];
     
     self.window.rootViewController = rootVC;
     

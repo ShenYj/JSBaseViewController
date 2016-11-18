@@ -7,6 +7,7 @@
 //
 
 #import "JSNavigationController.h"
+#import "JSBaseViewController.h"
 
 @interface JSNavigationController ()
 
@@ -25,7 +26,10 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     // 设置返回按钮
-    
+    if ([viewController isKindOfClass:[JSBaseViewController class]]) {
+        JSBaseViewController *baseVC = (JSBaseViewController *)viewController;
+        baseVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:@"返回" withFont:16 withTarget:self withAction:@selector(goBackToParentController:)];
+    }
     
     // 设置全局隐藏底部TabBar
     if (self.bottomBarHiddenWhenPushed) {
@@ -36,6 +40,10 @@
     }
     
     [super pushViewController:viewController animated:animated];
+}
+
+- (void)goBackToParentController:(JSBaseNavBarButtonItem *)sender {
+    [self popViewControllerAnimated:YES];
 }
 
 
