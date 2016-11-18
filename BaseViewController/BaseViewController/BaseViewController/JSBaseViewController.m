@@ -13,9 +13,6 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
 
 @interface JSBaseViewController ()
 
-//@property (nonatomic,strong) UIBarButtonItem *js_LeftBarButtonItem;
-//@property (nonatomic,strong) UIBarButtonItem *js_RightBarButtonItem;
-
 @end
 
 @implementation JSBaseViewController
@@ -26,23 +23,28 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
     [self setUpUI];
 }
 
+#pragma mark
+#pragma mark - set up UI
+
+/** 设置标题 */ 
 - (void)setTitle:(NSString *)title {
     [super setTitle:title];
     self.js_navigationItem.title = title;
 }
 
+/** 设置UI */
 - (void)setUpUI {
+    
     [self prepareCustomNavigationBar];
     [self prepareView];
-    
 }
-
+/** 主视图 */
 - (void)prepareView {
     
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-/** 自定义导航条视图 */
+/** 导航条视图 */
 - (void)prepareCustomNavigationBar {
     
     [self.view addSubview:self.js_NavigationBar];
@@ -50,9 +52,6 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
     [self.js_NavigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18],NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
 }
-
-
-
 
 #pragma mark 
 #pragma mark - lazy

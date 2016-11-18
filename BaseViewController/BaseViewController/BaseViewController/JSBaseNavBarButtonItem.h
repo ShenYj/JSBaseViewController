@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface JSBaseNavBarButtonItem : UIBarButtonItem
+
 /** 自定义构造函数 */
 - (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withTarget:(id)target withAction:(SEL)action;
 - (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withNormalColor:(UIColor *)normalColor withHighlightedColor:(UIColor *)highlightedColor withTarget:(id)target withAction:(SEL)action;

@@ -15,7 +15,6 @@
     return [self initWithTitle:title withFont:font withNormalColor:nil withHighlightedColor:nil withTarget:target withAction:action];
 }
 
-/** 自定义构造函数 */
 - (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withNormalColor:(UIColor *)normalColor withHighlightedColor:(UIColor *)highlightedColor withTarget:(id)target withAction:(SEL)action {
     
     UIButton *button = [[UIButton alloc] init];
