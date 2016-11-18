@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JSNavigationController.h"
-#import "JSBaseViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    JSBaseViewController *baseVC = [[JSBaseViewController alloc] init];
+    ViewController *baseVC = [[ViewController alloc] init];
     
     JSNavigationController *navigationController = [[JSNavigationController alloc] initWithRootViewController:baseVC];
     

@@ -14,6 +14,10 @@
 		F72350351DDDF7C8005D0E2E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72350341DDDF7C8005D0E2E /* Launch Screen.storyboard */; };
 		F72350381DDDF7FB005D0E2E /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350371DDDF7FB005D0E2E /* JSNavigationController.m */; };
 		F723503B1DDDF8A8005D0E2E /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */; };
+		F723503E1DDDFB6A005D0E2E /* JSSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F723503D1DDDFB6A005D0E2E /* JSSubViewController.m */; };
+		F72350411DDDFC31005D0E2E /* UIColor+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350401DDDFC31005D0E2E /* UIColor+JSExtension.m */; };
+		F72350471DDE94BE005D0E2E /* JSNextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350461DDE94BE005D0E2E /* JSNextDemoViewController.m */; };
+		F723504A1DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,14 @@
 		F72350371DDDF7FB005D0E2E /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
 		F72350391DDDF8A8005D0E2E /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
 		F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
+		F723503C1DDDFB6A005D0E2E /* JSSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSubViewController.h; sourceTree = "<group>"; };
+		F723503D1DDDFB6A005D0E2E /* JSSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSubViewController.m; sourceTree = "<group>"; };
+		F723503F1DDDFC31005D0E2E /* UIColor+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSExtension.h"; sourceTree = "<group>"; };
+		F72350401DDDFC31005D0E2E /* UIColor+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSExtension.m"; sourceTree = "<group>"; };
+		F72350451DDE94BE005D0E2E /* JSNextDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNextDemoViewController.h; sourceTree = "<group>"; };
+		F72350461DDE94BE005D0E2E /* JSNextDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNextDemoViewController.m; sourceTree = "<group>"; };
+		F72350481DDE9F89005D0E2E /* JSBaseNavBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseNavBarButtonItem.h; sourceTree = "<group>"; };
+		F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseNavBarButtonItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,8 @@
 				F72350371DDDF7FB005D0E2E /* JSNavigationController.m */,
 				F72350391DDDF8A8005D0E2E /* JSBaseViewController.h */,
 				F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */,
+				F72350481DDE9F89005D0E2E /* JSBaseNavBarButtonItem.h */,
+				F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -86,6 +100,12 @@
 				F72350251DDDF791005D0E2E /* AppDelegate.m */,
 				F723502C1DDDF791005D0E2E /* ViewController.h */,
 				F723502D1DDDF791005D0E2E /* ViewController.m */,
+				F72350451DDE94BE005D0E2E /* JSNextDemoViewController.h */,
+				F72350461DDE94BE005D0E2E /* JSNextDemoViewController.m */,
+				F723503C1DDDFB6A005D0E2E /* JSSubViewController.h */,
+				F723503D1DDDFB6A005D0E2E /* JSSubViewController.m */,
+				F723503F1DDDFC31005D0E2E /* UIColor+JSExtension.h */,
+				F72350401DDDFC31005D0E2E /* UIColor+JSExtension.m */,
 				F723502B1DDDF791005D0E2E /* main.m */,
 				F72350341DDDF7C8005D0E2E /* Launch Screen.storyboard */,
 				F72350261DDDF791005D0E2E /* Assets.xcassets */,
@@ -166,9 +186,13 @@
 			files = (
 				F72350381DDDF7FB005D0E2E /* JSNavigationController.m in Sources */,
 				F723503B1DDDF8A8005D0E2E /* JSBaseViewController.m in Sources */,
+				F723503E1DDDFB6A005D0E2E /* JSSubViewController.m in Sources */,
 				F72350331DDDF791005D0E2E /* ViewController.m in Sources */,
 				F72350321DDDF791005D0E2E /* main.m in Sources */,
+				F72350411DDDFC31005D0E2E /* UIColor+JSExtension.m in Sources */,
+				F72350471DDE94BE005D0E2E /* JSNextDemoViewController.m in Sources */,
 				F723502E1DDDF791005D0E2E /* AppDelegate.m in Sources */,
+				F723504A1DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
