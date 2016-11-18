@@ -1,6 +1,6 @@
 # JSBaseViewController
 
-==JSBaseViewController基类
+==JSBaseViewController基类[ShenYj](https://github.com/ShenYj)
 
 自定义根视图,使用自定义导航栏,在Pop时解决两个视图控制器导航条融合的问题
 
