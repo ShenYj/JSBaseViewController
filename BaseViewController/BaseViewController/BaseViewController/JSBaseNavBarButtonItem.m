@@ -17,6 +17,11 @@
 
 - (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withNormalColor:(UIColor *)normalColor withHighlightedColor:(UIColor *)highlightedColor withTarget:(id)target withAction:(SEL)action {
     
+    return [self initWithTitle:title withFont:font withNormalColor:normalColor withHighlightedColor:highlightedColor withTarget:target withAction:action isBack:NO withBackImageName:nil];
+}
+
+- (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withNormalColor:(UIColor *)normalColor withHighlightedColor:(UIColor *)highlightedColor withTarget:(id)target withAction:(SEL)action isBack:(BOOL)isBack withBackImageName:(NSString *)backImageName {
+    
     UIButton *button = [[UIButton alloc] init];
     
     button.titleLabel.font = [UIFont systemFontOfSize:font];
@@ -27,14 +32,19 @@
     if ( target && action ) {
         [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
-    [button sizeToFit];
     
     normalColor ? ([button setTitleColor:normalColor forState:UIControlStateNormal]): ([button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal]);
     highlightedColor ? ([button setTitleColor:highlightedColor forState:UIControlStateHighlighted]) : ([button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted]);
     
+    if (isBack && backImageName) {
+        // 是返回按钮 (使用原图样式,不做渲染)
+        [button setImage:[[UIImage imageNamed:backImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [button setImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@_highlighted",backImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  forState:UIControlStateHighlighted];
+    }
+    [button sizeToFit];
     JSBaseNavBarButtonItem *barButtonItem = [[JSBaseNavBarButtonItem alloc] initWithCustomView:button];
-    
     return barButtonItem;
+
 }
 
 

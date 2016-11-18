@@ -40,7 +40,7 @@
                 JSBaseViewController *parentVC = self.childViewControllers.firstObject;
                 title = parentVC.js_navigationItem.title;
             }
-            nextVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:title withFont:16 withTarget:self withAction:@selector(goBackToParentController:)];
+            nextVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:title withFont:16 withNormalColor:nil withHighlightedColor:nil withTarget:self withAction:@selector(goBackToParentController:)isBack:YES withBackImageName:@"v2_goback"];
             
         }
     

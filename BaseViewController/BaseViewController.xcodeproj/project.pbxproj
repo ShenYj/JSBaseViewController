@@ -18,6 +18,7 @@
 		F72350411DDDFC31005D0E2E /* UIColor+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350401DDDFC31005D0E2E /* UIColor+JSExtension.m */; };
 		F72350471DDE94BE005D0E2E /* JSNextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350461DDE94BE005D0E2E /* JSNextDemoViewController.m */; };
 		F723504A1DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */; };
+		F723504F1DDEC841005D0E2E /* v2_goback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F723504E1DDEC841005D0E2E /* v2_goback@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F72350461DDE94BE005D0E2E /* JSNextDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNextDemoViewController.m; sourceTree = "<group>"; };
 		F72350481DDE9F89005D0E2E /* JSBaseNavBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseNavBarButtonItem.h; sourceTree = "<group>"; };
 		F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseNavBarButtonItem.m; sourceTree = "<group>"; };
+		F723504E1DDEC841005D0E2E /* v2_goback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "v2_goback@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */,
 				F72350481DDE9F89005D0E2E /* JSBaseNavBarButtonItem.h */,
 				F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */,
+				F723504E1DDEC841005D0E2E /* v2_goback@2x.png */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F723504F1DDEC841005D0E2E /* v2_goback@2x.png in Resources */,
 				F72350351DDDF7C8005D0E2E /* Launch Screen.storyboard in Resources */,
 				F723502F1DDDF791005D0E2E /* Assets.xcassets in Resources */,
 			);
