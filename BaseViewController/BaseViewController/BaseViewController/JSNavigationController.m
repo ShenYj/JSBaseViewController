@@ -34,12 +34,13 @@
         
         // 设置返回按钮
         if ([viewController isKindOfClass:[JSBaseViewController class]]) {
-            JSBaseViewController *parentVC = self.childViewControllers[self.childViewControllers.count-1];
             JSBaseViewController *nextVC = (JSBaseViewController *)viewController;
-            nextVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:parentVC.js_navigationItem.title withFont:16 withTarget:self withAction:@selector(goBackToParentController:)];
-            if (self.childViewControllers.count > 1) {
-                nextVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:@"返回" withFont:16 withTarget:self withAction:@selector(goBackToParentController:)];
+            NSString *title = @"返回";
+            if (self.childViewControllers.count == 1) {
+                JSBaseViewController *parentVC = self.childViewControllers.firstObject;
+                title = parentVC.js_navigationItem.title;
             }
+            nextVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:title withFont:16 withTarget:self withAction:@selector(goBackToParentController:)];
             
         }
     
