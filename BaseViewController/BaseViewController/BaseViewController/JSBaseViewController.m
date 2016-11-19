@@ -7,7 +7,7 @@
 //
 
 #import "JSBaseViewController.h"
-#import "JSNavigationController.h"
+#import "JSBaseNavigationController.h"
 
 static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 */
 

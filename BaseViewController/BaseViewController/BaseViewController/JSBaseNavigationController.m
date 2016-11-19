@@ -6,14 +6,14 @@
 //  Copyright © 2016年 ShenYj. All rights reserved.
 //
 
-#import "JSNavigationController.h"
+#import "JSBaseNavigationController.h"
 #import "JSBaseViewController.h"
 
-@interface JSNavigationController ()
+@interface JSBaseNavigationController ()
 
 @end
 
-@implementation JSNavigationController
+@implementation JSBaseNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
