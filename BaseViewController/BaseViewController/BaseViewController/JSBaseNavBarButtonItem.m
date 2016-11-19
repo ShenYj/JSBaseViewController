@@ -35,6 +35,7 @@
     
     normalColor ? ([button setTitleColor:normalColor forState:UIControlStateNormal]): ([button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal]);
     highlightedColor ? ([button setTitleColor:highlightedColor forState:UIControlStateHighlighted]) : ([button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted]);
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     
     if (isBack && backImageName) {
         // 是返回按钮 (使用原图样式,不做渲染)

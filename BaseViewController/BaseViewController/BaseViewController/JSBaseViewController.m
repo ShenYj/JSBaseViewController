@@ -19,7 +19,7 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 设置视图
     [self setUpUI];
 }
 
@@ -31,19 +31,6 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
     [super setTitle:title];
     self.js_navigationItem.title = title;
 }
-
-/** 设置UI */
-- (void)setUpUI {
-    
-    [self prepareCustomNavigationBar];
-    [self prepareView];
-}
-/** 主视图 */
-- (void)prepareView {
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-}
-
 /** 导航条视图 */
 - (void)prepareCustomNavigationBar {
     
@@ -55,6 +42,20 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
                                                     NSForegroundColorAttributeName: [UIColor orangeColor]}
      ];
     
+}
+
+/** 设置UI */
+- (void)setUpUI {
+    
+    [self prepareCustomNavigationBar];
+    [self prepareView];
+}
+/** 主视图 */
+- (void)prepareView {
+    // 设置基类视图背景色
+    self.view.backgroundColor = [UIColor whiteColor];
+    // 取消穿透
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark 
