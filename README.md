@@ -4,6 +4,8 @@
 
 自定义根视图,使用自定义导航栏,在Pop时解决两个视图控制器导航条融合的问题
 
+![Demo](https://github.com/ShenYj/JSBaseViewController/blob/master/BaseViewControllerDemo.gif?raw=true)
+
 >>使用说明：
 >>>1.导入 `JSBaseViewController.h` 头文件<br>
 >>>2.将需要的视图控制器集成自`JSBaseViewController`<br>
