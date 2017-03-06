@@ -11,16 +11,38 @@
 @implementation JSBaseNavBarButtonItem
 
 
-- (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withTarget:(id)target withAction:(SEL)action {
+- (instancetype)initWithTitle:(NSString *)title
+                     withFont:(CGFloat)font
+                   withTarget:(id)target
+                   withAction:(SEL)action {
+    
     return [self initWithTitle:title withFont:font withNormalColor:nil withHighlightedColor:nil withTarget:target withAction:action];
 }
 
-- (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withNormalColor:(UIColor *)normalColor withHighlightedColor:(UIColor *)highlightedColor withTarget:(id)target withAction:(SEL)action {
+- (instancetype)initWithTitle:(NSString *)title
+                     withFont:(CGFloat)font
+              withNormalColor:(UIColor *)normalColor
+         withHighlightedColor:(UIColor *)highlightedColor
+                   withTarget:(id)target
+                   withAction:(SEL)action {
     
-    return [self initWithTitle:title withFont:font withNormalColor:normalColor withHighlightedColor:highlightedColor withTarget:target withAction:action isBack:NO withBackImageName:nil];
+    return [self initWithTitle:title withFont:font
+               withNormalColor:normalColor
+          withHighlightedColor:highlightedColor
+                    withTarget:target
+                    withAction:action
+                        isBack:NO
+             withBackImageName:nil];
 }
 
-- (instancetype)initWithTitle:(NSString *)title withFont:(CGFloat)font withNormalColor:(UIColor *)normalColor withHighlightedColor:(UIColor *)highlightedColor withTarget:(id)target withAction:(SEL)action isBack:(BOOL)isBack withBackImageName:(NSString *)backImageName {
+- (instancetype)initWithTitle:(NSString *)title
+                     withFont:(CGFloat)font
+              withNormalColor:(UIColor *)normalColor
+         withHighlightedColor:(UIColor *)highlightedColor
+                   withTarget:(id)target
+                   withAction:(SEL)action
+                       isBack:(BOOL)isBack
+            withBackImageName:(NSString *)backImageName {
     
     UIButton *button = [[UIButton alloc] init];
     
@@ -45,8 +67,31 @@
     [button sizeToFit];
     JSBaseNavBarButtonItem *barButtonItem = [[JSBaseNavBarButtonItem alloc] initWithCustomView:button];
     return barButtonItem;
-
+    
 }
+
+/** 图片按钮 */
+- (instancetype)initWithNormalImgName: (NSString *)normalImgName
+               withHighlightedImgName: (NSString *)highlightedImgName
+                           withTarget:(id)target
+                           withAction:(SEL)action {
+    
+    UIButton *button = [[UIButton alloc] init];
+    if (normalImgName.length && highlightedImgName.length) {
+        UIImage *normal = [[UIImage imageNamed:normalImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *highli = [[UIImage imageNamed:highlightedImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [button setImage:normal forState:UIControlStateNormal];
+        [button setImage:highli forState:UIControlStateHighlighted];
+    }
+    [button sizeToFit];
+    if (target && action) {
+        [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    }
+    JSBaseNavBarButtonItem *barButtonItem = [[JSBaseNavBarButtonItem alloc] initWithCustomView:button];
+    return barButtonItem;
+    
+}
+
 
 
 @end
