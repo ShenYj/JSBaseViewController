@@ -38,10 +38,10 @@
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem: self.textView
                                                            attribute: NSLayoutAttributeTop
                                                            relatedBy: NSLayoutRelationEqual
-                                                              toItem: self.view
-                                                           attribute: NSLayoutAttributeTop
+                                                              toItem: self.js_NavigationBar
+                                                           attribute: NSLayoutAttributeBottom
                                                           multiplier: 1
-                                                            constant: 64];
+                                                            constant: 0];
     [self.view addConstraint:top];
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem: self.textView
                                                              attribute: NSLayoutAttributeRight

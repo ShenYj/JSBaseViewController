@@ -9,7 +9,9 @@
 #import "JSBaseViewController.h"
 #import "JSBaseNavigationController.h"
 
-static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 */
+/** 自定义导航条高度 */
+static CGFloat const kNavigationBarHeight = 64.f;
+static CGFloat const kNavigationBarExtensionHeight = 88.f;
 
 @interface JSBaseViewController ()
 
@@ -66,7 +68,11 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
 - (JSNavigationBar *)js_NavigationBar {
     
     if (!_js_NavigationBar) {
-        _js_NavigationBar = [[JSNavigationBar alloc] initWithFrame:CGRectMake(0,  0, [UIScreen mainScreen].bounds.size.width, kNavigationBarHeight)];
+        CGFloat height = kNavigationBarHeight;
+        if (IS_IPHONE_X) {
+            height = kNavigationBarExtensionHeight;
+        }
+        _js_NavigationBar = [[JSNavigationBar alloc] initWithFrame:CGRectMake(0,  0, [UIScreen mainScreen].bounds.size.width, height)];
     }
     return _js_NavigationBar;
 }
