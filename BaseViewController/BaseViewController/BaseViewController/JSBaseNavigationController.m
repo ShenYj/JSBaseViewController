@@ -15,16 +15,17 @@
 
 @implementation JSBaseNavigationController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     // 隐藏默认的导航条
     self.navigationBar.hidden = YES;
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
     if (self.childViewControllers.count > 0) {
         
         // 设置全局隐藏底部TabBar
@@ -41,15 +42,13 @@
                 title = parentVC.js_navigationItem.title;
             }
             nextVC.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:title withFont:16 withNormalColor:nil withHighlightedColor:nil withTarget:self withAction:@selector(goBackToParentController:)isBack:YES withBackImageName:@"v2_goback"];
-            
         }
-    
     }
-    
     [super pushViewController:viewController animated:animated];
 }
 
-- (void)goBackToParentController:(JSBaseNavBarButtonItem *)sender {
+- (void)goBackToParentController:(JSBaseNavBarButtonItem *)sender
+{
     [self popViewControllerAnimated:YES];
 }
 

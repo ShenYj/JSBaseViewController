@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68ADEE691FA96D3E0012B500 /* JSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ADEE681FA96D3E0012B500 /* JSNavigationBar.m */; };
 		F723502E1DDDF791005D0E2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F72350251DDDF791005D0E2E /* AppDelegate.m */; };
 		F723502F1DDDF791005D0E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72350261DDDF791005D0E2E /* Assets.xcassets */; };
 		F72350321DDDF791005D0E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F723502B1DDDF791005D0E2E /* main.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68ADEE671FA96D3E0012B500 /* JSNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNavigationBar.h; sourceTree = "<group>"; };
+		68ADEE681FA96D3E0012B500 /* JSNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNavigationBar.m; sourceTree = "<group>"; };
 		F72350081DDDF739005D0E2E /* BaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F723501C1DDDF739005D0E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		F72350241DDDF791005D0E2E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				F72350371DDDF7FB005D0E2E /* JSBaseNavigationController.m */,
 				F72350391DDDF8A8005D0E2E /* JSBaseViewController.h */,
 				F723503A1DDDF8A8005D0E2E /* JSBaseViewController.m */,
+				68ADEE671FA96D3E0012B500 /* JSNavigationBar.h */,
+				68ADEE681FA96D3E0012B500 /* JSNavigationBar.m */,
 				F72350481DDE9F89005D0E2E /* JSBaseNavBarButtonItem.h */,
 				F72350491DDE9F89005D0E2E /* JSBaseNavBarButtonItem.m */,
 				F723504E1DDEC841005D0E2E /* v2_goback@2x.png */,
@@ -192,6 +197,7 @@
 				F723503B1DDDF8A8005D0E2E /* JSBaseViewController.m in Sources */,
 				F723503E1DDDFB6A005D0E2E /* JSSubViewController.m in Sources */,
 				F72350331DDDF791005D0E2E /* ViewController.m in Sources */,
+				68ADEE691FA96D3E0012B500 /* JSNavigationBar.m in Sources */,
 				F72350321DDDF791005D0E2E /* main.m in Sources */,
 				F72350411DDDFC31005D0E2E /* UIColor+JSExtension.m in Sources */,
 				F72350471DDE94BE005D0E2E /* JSNextDemoViewController.m in Sources */,
@@ -292,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BaseViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.BaseViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BaseViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShenYj.BaseViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";

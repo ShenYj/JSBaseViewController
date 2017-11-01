@@ -27,13 +27,37 @@
     
     [self.view addSubview:self.textView];
     self.textView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem: self.textView
+                                                            attribute: NSLayoutAttributeLeft
+                                                            relatedBy: NSLayoutRelationEqual
+                                                               toItem: self.view
+                                                            attribute: NSLayoutAttributeLeft
+                                                           multiplier: 1
+                                                             constant: 0];
     [self.view addConstraint:left];
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:64];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem: self.textView
+                                                           attribute: NSLayoutAttributeTop
+                                                           relatedBy: NSLayoutRelationEqual
+                                                              toItem: self.view
+                                                           attribute: NSLayoutAttributeTop
+                                                          multiplier: 1
+                                                            constant: 64];
     [self.view addConstraint:top];
-    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0];
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem: self.textView
+                                                             attribute: NSLayoutAttributeRight
+                                                             relatedBy: NSLayoutRelationEqual
+                                                                toItem: self.view
+                                                             attribute: NSLayoutAttributeRight
+                                                            multiplier: 1
+                                                              constant: 0];
     [self.view addConstraint:right];
-    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem: self.textView
+                                                              attribute: NSLayoutAttributeBottom
+                                                              relatedBy: NSLayoutRelationEqual
+                                                                 toItem: self.view
+                                                              attribute: NSLayoutAttributeBottom
+                                                             multiplier: 1
+                                                               constant: 0];
     [self.view addConstraint:bottom];
     
 }

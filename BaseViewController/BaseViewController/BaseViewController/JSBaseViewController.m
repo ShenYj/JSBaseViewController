@@ -17,7 +17,8 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
 
 @implementation JSBaseViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // 设置视图
     [self setUpUI];
@@ -27,13 +28,14 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
 #pragma mark - set up UI
 
 /** 设置标题 */ 
-- (void)setTitle:(NSString *)title {
+- (void)setTitle:(NSString *)title
+{
     [super setTitle:title];
     self.js_navigationItem.title = title;
 }
 /** 导航条视图 */
-- (void)prepareCustomNavigationBar {
-    
+- (void)prepareCustomNavigationBar
+{
     [self.view addSubview:self.js_NavigationBar];
     self.js_NavigationBar.items = @[self.js_navigationItem];
     self.js_NavigationBar.barTintColor = [UIColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1.0];
@@ -41,17 +43,17 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
                                                     NSFontAttributeName: [UIFont systemFontOfSize:18],
                                                     NSForegroundColorAttributeName: [UIColor orangeColor]}
      ];
-    
 }
 
 /** 设置UI */
-- (void)setUpUI {
-    
+- (void)setUpUI
+{
     [self prepareCustomNavigationBar];
     [self prepareView];
 }
 /** 主视图 */
-- (void)prepareView {
+- (void)prepareView
+{
     // 设置基类视图背景色
     self.view.backgroundColor = [UIColor whiteColor];
     // 取消穿透
@@ -61,10 +63,10 @@ static CGFloat const kNavigationBarHeight = 64.f;  /** 自定义导航条高度 
 #pragma mark 
 #pragma mark - lazy
 
-- (UINavigationBar *)js_NavigationBar {
+- (JSNavigationBar *)js_NavigationBar {
     
     if (!_js_NavigationBar) {
-        _js_NavigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kNavigationBarHeight)];
+        _js_NavigationBar = [[JSNavigationBar alloc] initWithFrame:CGRectMake(0,  0, [UIScreen mainScreen].bounds.size.width, kNavigationBarHeight)];
     }
     return _js_NavigationBar;
 }

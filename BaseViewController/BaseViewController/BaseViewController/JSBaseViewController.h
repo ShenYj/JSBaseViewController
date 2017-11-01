@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSNavigationBar.h"
 #import "JSBaseNavBarButtonItem.h"
 
 @interface JSBaseViewController : UIViewController
 
 
 /** 自定义导航条 */
-@property (nonatomic,strong) UINavigationBar *js_NavigationBar;
+@property (nonatomic,strong) JSNavigationBar *js_NavigationBar;
 /** 自定义导航条Item */
 @property (nonatomic,strong) UINavigationItem *js_navigationItem;
 
