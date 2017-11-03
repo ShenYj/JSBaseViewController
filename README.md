@@ -14,3 +14,4 @@
 - [x] 2.将需要的视图控制器集成自`JSBaseViewController`<br>
 - [x] 3.在需要使用`navigationItem`的地方使用 `js_NavigationItem`；`navigationBar`使用` js_NavigationBar`替代<br>
 - [x] 4.如果需要子控制器在Push 的时候全局隐藏底部bar，直接设置 `JSNavigationController`的`bottomBarHiddenWhenPushed`为`YES`<br>
+- [x] 5.iOS 11和iPhone X 适配 <br>
