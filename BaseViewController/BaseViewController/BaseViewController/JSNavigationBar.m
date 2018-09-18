@@ -20,7 +20,7 @@
                 NSLog(@"_UIBarBackground");
                 CGRect frame = view.frame;
                 frame.size.height = 64;
-                if (IS_IPHONE_X) {
+                if (IS_IPHONE_PROFILED_FULL_SCREEN) {
                     frame.origin.y = 24;
                 }
                 view.frame = frame;
@@ -30,7 +30,7 @@
                 NSLog(@"_UINavigationBarContentView");
                 CGRect frame = view.frame;
                 frame.origin.y = 20;
-                if (IS_IPHONE_X) {
+                if (IS_IPHONE_PROFILED_FULL_SCREEN) {
                     frame.origin.y = 44;
                 }
                 view.frame = frame;

@@ -69,7 +69,7 @@ static CGFloat const kNavigationBarExtensionHeight = 88.f;
     
     if (!_js_NavigationBar) {
         CGFloat height = kNavigationBarHeight;
-        if (IS_IPHONE_X) {
+        if (IS_IPHONE_PROFILED_FULL_SCREEN) {
             height = kNavigationBarExtensionHeight;
         }
         _js_NavigationBar = [[JSNavigationBar alloc] initWithFrame:CGRectMake(0,  0, [UIScreen mainScreen].bounds.size.width, height)];

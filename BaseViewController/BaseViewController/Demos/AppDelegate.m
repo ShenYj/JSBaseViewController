@@ -21,7 +21,13 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+    if (IS_IPHONE_XR) {
+        NSLog(@"XR");
+    } else if (IS_IPHONE_X_S) {
+        NSLog(@"X/XS");
+    } else if (IS_IPHONE_XS_MAX) {
+        NSLog(@"MAX");
+    }
     UITabBarController *rootVC = [[UITabBarController alloc] init];
     JSBaseNavigationController *navigationController1 = [self loadNavigationControllerWithTitle:@"页面1"];
     JSBaseNavigationController *navigationController2 = [self loadNavigationControllerWithTitle:@"页面2"];
