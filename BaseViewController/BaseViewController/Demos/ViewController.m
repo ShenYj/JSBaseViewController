@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.js_navigationItem.title = @"首页";
-    self.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:@"首页" withFont:16 withTarget:self withAction:@selector(clickLeftBarButtonItem:)];
+    self.js_navigationItem.leftBarButtonItem = [[JSBaseNavBarButtonItem alloc] initWithTitle:@"Push" withFont:16 withTarget:self withAction:@selector(clickLeftBarButtonItem:)];
     
     [self.view addSubview:self.textView];
     self.textView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -63,7 +63,7 @@
 }
 
 - (void)clickLeftBarButtonItem:(JSBaseNavBarButtonItem *)sender {
-    
+    [self.textView resignFirstResponder];
     JSNextDemoViewController *nextVC = [[JSNextDemoViewController alloc] init];
     [self.navigationController pushViewController:nextVC animated:YES];
 }
